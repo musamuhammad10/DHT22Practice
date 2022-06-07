@@ -30,3 +30,27 @@ if (speed < 40){
 } else {
   print("ticket")
 }
+
+#defensive programing example
+# prompt user for speed
+speed <- readline("What is your speed? ")
+# initially speed is a character and we cant compare it to 40, 70 and so on so we convert to numeric
+speed <- is.numeric(speed)
+
+#check if user response is numeric
+if (is.na(speed)) {
+  print("Enter a number please | Quitting program")
+} else {
+  # user input is numeric. Process speed
+  if (speed < 40) {
+    print("you are slow")
+  } else if (speed <= 70) {
+    print(" you are at a residential area")
+  } else if (speed <= 120) {
+    print("you are on the highway")
+  } else {
+    print("ticket")
+  }
+  
+  
+}
